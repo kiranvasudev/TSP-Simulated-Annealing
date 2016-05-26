@@ -21,33 +21,49 @@
 		\item{Get the best solution for the following computation times: 1, 3, 5, 10, 15, 30 minutes.}
 		\item{Compare the performance between Random-restart Hill Climbing and Simulated Annealing.}
 	\end{itemize}
-
+\newpage
 \subsection{Answer the following questions:}
 	\begin{itemize}
-		\item{What are constraint satisfaction problems?}
+		\item\textbf{What are constraint satisfaction problems?}\\
 		%Patrick%
-		\item{What are the components of a constraint satisfaction problem?}
-		%K%
-		\item{What is a solution for a constraint satisfaction problem?}
+		
+		\item\textbf{What are the components of a constraint satisfaction problem?}\\
+		The components of a constraint satisfaction problem are Variables, Domains and constraints. \\\\
+		\textbf X is a a set of Variables $$\left\{X_1,.....,X_n\right\}$$\\
+		\textbf D is a a set of Domains $$\left\{D_1,.....,D_n\right\},$$ one domain for each variable\\\\
+		\textbf C is a set of Constraints that allow a specific combination of values\\\\
+		Each domain has an allowable set of values of each Variable $$\left\{v_1,..v_k\right\}$$ for each variable $X_i$.\\
+		Each constraint consists of a pair $\langle scope, relation \rangle$ where scope is a tuple of variables that participate in the relation and the relation is the constraint that has to be applied to this tuple.
+		
+		\item\textbf{What is a solution for a constraint satisfaction problem?}\\
 		%Patrick%
-		\item{What is a constraint and how is it represented?}
-		%K%
-		\item{What is a constraint graph?}
+		
+		\item\textbf{What is a constraint and how is it represented?}\\
+		Each constraint consists of a pair $\langle scope, relation \rangle$ where scope is a tuple of variables that participate in the relation and the relation is the constraint that has to be applied to this tuple.\\ A constraint can be represented in a way where all the variables in the tuple satisfy the given constraint or a relation that supports two operations, namely, testing if a tuple is a member of a relation and enumerating the member of the tuple with the given relation.
+		
+		
+		\item\textbf{What is a constraint graph?}\\
 		%Patrick%
-		\item{What are discrete variables and how are they divided?}
-		%K%
-		\item{What is preference?}
+		
+		\item\textbf{What are discrete variables and how are they divided?}\\
+		A discrete variable is one who's domain is finite or countable infinite.\\ An example of a finite discrete variable is \textbf{Boolean}. An example of an infinite domain is a set of integers or strings.
+		
+		\item\textbf{What is preference?}\\
 		%Patrick%
-		\item{What is a successor function?}
-		%K%
-		\item{What is Backtracking search?}
+		
+		\item\textbf{What is a successor function?}\\
+		A successor function is that describes all possible actions that can convert the current state to another state. This function is used to move between different states. It is defines a relation of accessability among various states. 
+		
+		\item\textbf{What is Backtracking search?}\\
 		%Patrick%
 	\end{itemize}
-	
+
+\newpage
 \subsection{In class you had a look at four methods for improving the efficiency of
 the Backtracking search. Explain each approach in your own words.}
 %K%
 
+\newpage
 \subsection{Represent the Sudoku puzzle as a constraint satisfaction problem. You
 must include the domains, all variables and all constraints needed to
 solve the puzzle.}
