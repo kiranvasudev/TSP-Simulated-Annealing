@@ -29,7 +29,8 @@ void Agent::run() {
 	//print_cities(cities);
 	//save_cities_image(cities, 1);
 
-	random_restart_hill_climb();
+	choose_solving_approach();
+//	random_restart_hill_climb();
 }
 
 void Agent::print_cities(vector<City>& cities) {
@@ -138,7 +139,6 @@ double Agent::calculateDistance(double lon1, double lat1, double lon2,
 
 void Agent::random_restart_hill_climb() {
 
-	//TODO
 	//HINT:
 	//		std::srand ( unsigned ( std::time(0) ) );
 
@@ -160,4 +160,28 @@ void Agent::random_restart_hill_climb() {
 	cout << "total distance " << shortestDistance << endl;
 	cout << "-------------------------------------------" << endl;
 	print_cities(journeyPath);
+}
+
+void Agent::start_simulated_annealing() {
+
+	//TODO
+
+}
+
+void Agent::choose_solving_approach() {
+	string approach = "-1";
+
+	cout << "assignment_08 " << endl;
+	cout << "Select approach: " << endl;
+	cout << "(1) Hill Climbing (2) Simulated Annealing" << endl;
+	cin >> approach;
+
+	if (approach == "1") {
+		cout << "Hill Climbing" << endl;
+		random_restart_hill_climb();
+	}
+
+	if (approach == "2") {
+		cout << "Simulated Annealing" << endl;
+	}
 }
