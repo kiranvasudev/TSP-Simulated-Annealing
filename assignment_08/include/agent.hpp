@@ -20,10 +20,12 @@ class Agent {
         vector<City> cities;
         double shortestDistance;
         vector<City> shortestRoute;
+        int iteration;
         
         // The following two methods are implented for assignment_08.
         void choose_solving_approach();
-        void start_simulated_annealing();
+        void start_simulated_annealing(int minuets);
+        vector<City> simulatedAnnealing(vector<City> cities);
 
         // The following two lines are from the previous assignment.
         vector<City> hillClimb(vector<City> cities);
