@@ -21,10 +21,13 @@ class Agent {
         double shortestDistance;
         vector<City> shortestRoute;
         
+        // The following two methods are implented for assignment_08.
+        void choose_solving_approach();
+        void start_simulated_annealing();
+
+        // The following two lines are from the previous assignment.
         vector<City> hillClimb(vector<City> cities);
         void random_restart_hill_climb();
-        
-        
 
     public:
         Agent(vector<City> Cities);
