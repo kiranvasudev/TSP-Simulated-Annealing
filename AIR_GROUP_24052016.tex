@@ -25,7 +25,7 @@
 \subsection{Answer the following questions:}
 	\begin{itemize}
 		\item\textbf{What are constraint satisfaction problems?}\\
-		%Patrick%
+		Constraint satisfaction problems appear if the following situation is given: Given states are described by variables which contain values and the problem which has to be solved depends on the values of the variables. In this case the problem is solved if the values of the variables satisfy all constraints. Thus a constraint satisfaction problem is a problem, which solvable if all the constraints are solved.
 		
 		\item\textbf{What are the components of a constraint satisfaction problem?}\\
 		The components of a constraint satisfaction problem are Variables, Domains and constraints. \\\\
@@ -36,26 +36,28 @@
 		Each constraint consists of a pair $\langle scope, relation \rangle$ where scope is a tuple of variables that participate in the relation and the relation is the constraint that has to be applied to this tuple.
 		
 		\item\textbf{What is a solution for a constraint satisfaction problem?}\\
-		%Patrick%
+		A Solution to a CSP is a consistent and complete assignment: A consitent assignment is one which does not breach the assignment in any constraints. The expression complete assignment describes an assignment in which every variable is assigned.
 		
 		\item\textbf{What is a constraint and how is it represented?}\\
 		Each constraint consists of a pair $\langle scope, relation \rangle$ where scope is a tuple of variables that participate in the relation and the relation is the constraint that has to be applied to this tuple.\\ A constraint can be represented in a way where all the variables in the tuple satisfy the given constraint or a relation that supports two operations, namely, testing if a tuple is a member of a relation and enumerating the member of the tuple with the given relation.
 		
 		
 		\item\textbf{What is a constraint graph?}\\
-		%Patrick%
+		A constraint graph is a graph, which illustrates a CSP. The nodes of the graph represent the variables of the problem and the connections between the nodes show how the nodes participate in the constraint.
 		
 		\item\textbf{What are discrete variables and how are they divided?}\\
 		A discrete variable is one who's domain is finite or countable infinite.\\ An example of a finite discrete variable is \textbf{Boolean}. An example of an infinite domain is a set of integers or strings.
 		
 		\item\textbf{What is preference?}\\
-		%Patrick%
+		In connection with CSP indicate preferences which solution are preferred. 
 		
 		\item\textbf{What is a successor function?}\\
 		A successor function is that describes all possible actions that can convert the current state to another state. This function is used to move between different states. It is defines a relation of accessability among various states. 
 		
 		\item\textbf{What is Backtracking search?}\\
-		%Patrick%
+		The Backtracking search is an algorithm, which is following a path until this path shows that it is not solvable (or a goal is found). If the path is not solvable, then the algorithm goes one step back and follows a different path from there. It continues with this procedure until it finds the goal or all nodes are visited.\\
+		\\
+		In case of CSP the end of a path is given, if the value of a node does not fullfill the constraint(s).
 	\end{itemize}
 
 \newpage
@@ -67,5 +69,12 @@ the Backtracking search. Explain each approach in your own words.}
 \subsection{Represent the Sudoku puzzle as a constraint satisfaction problem. You
 must include the domains, all variables and all constraints needed to
 solve the puzzle.}
-%Patrick%
+Variables (X): Each of the squares\\
+$X = \{1.1, 1.2, 1.3, ..., 1.9, 2.1, 2.2, ..., 9.9\}$\\
+\\
+Domains: Each number\\
+$D = \{1, 2, 3, 4, 5, 6, 7, 8, 9\}$\\
+\\
+Constraints: \\
+$C = \{ column Elements = \textit{Alldiff}, rowElements = \textit{Alldiff}, boxElements = \textit{Alldiff} \}$
 \end{document}
